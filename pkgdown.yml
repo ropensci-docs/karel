@@ -1,0 +1,20 @@
+pandoc: 3.2.1
+pkgdown: 2.1.0
+pkgdown_sha: ~
+articles:
+  a_intro_progrbasics_en: a_intro_progrbasics_en.html
+  a_intro_progrbasics_es: a_intro_progrbasics_es.html
+  aa_get_started_en: aa_get_started_en.html
+  aa_get_started_es: aa_get_started_es.html
+  b_meetingkarel_en: b_meetingkarel_en.html
+  b_meetingkarel_es: b_meetingkarel_es.html
+  c_decomposition_en: c_decomposition_en.html
+  c_decomposition_es: c_decomposition_es.html
+  d_controlstructures_en: d_controlstructures_en.html
+  d_controlstructures_es: d_controlstructures_es.html
+  e_examples_en: e_examples_en.html
+  e_examples_es: e_examples_es.html
+last_built: 2025-02-12T16:50Z
+urls:
+  reference: https://docs.ropensci.org/karel/reference
+  article: https://docs.ropensci.org/karel/articles

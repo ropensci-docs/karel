@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "439aa6d0ff46aeb13979ead83cc903acdd59db3f",
+    "author": "marcos-nb <marcosprunello@gmail.com>",
+    "time": "2024-07-27 00:24:38",
+    "files": 4,
+    "merge": false,
+    "message": "fixed links in DESCRIPTION, _pkgdown.yml and vignettes\n"
+  },
+  "repo": "https://github.com/ropensci/karel",
+  "pkg": "karel"
+}
