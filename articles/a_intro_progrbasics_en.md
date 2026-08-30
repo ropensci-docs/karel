@@ -1,0 +1,358 @@
+# 1 - Introduction and programming basics
+
+## Some Ideas about Programming
+
+Computers are an essential part of our daily lives. Almost all the
+devices we use have some type of computer capable of performing certain
+tasks: washing machines with different washing modes, gaming consoles
+for entertainment, powerful calculators, personal computers used for
+various purposes, cell phones with countless applications, and many
+more.
+
+All these devices with different types of computers have something in
+common: someone “tells them” how to work, that is, they provide them
+with a set of instructions to follow in order to accomplish a task.
+That’s what *programming* is about: it is the activity through which
+*people* give a *computer* a set of instructions to *solve a problem*.
+Those who perform this activity are called *programmers.* Without people
+programming them, computers cease to be useful, no matter how complex
+these devices may be. The sets of instructions that computers receive
+are called programs.
+
+Programming is a creative process: in many cases, a task can be
+accomplished by following different paths, and the programmer is the one
+who must imagine what those paths are and choose one. Some paths may be
+better than others, but in any case, the computer will simply follow the
+instructions devised by the programmer.
+
+Unfortunately, computers don’t understand English or any other human
+language. We have to give them instructions in a language they can
+understand. For that, we need to learn a *programming language*, which
+is simply an artificial language composed of a series of expressions
+that the computer can interpret. Computers interpret our instructions
+very literally, so when programming, we need to be very specific. We
+must follow the rules of the programming language and be clear in the
+instructions provided.
+
+Now, why should we learn to program when we want to analyze data,
+generate statistics, graphs and conclusions? The activity of statistical
+professionals, data science professionals, or anyone who requires data
+analysis is enhanced with the use of computer tools and programming
+capabilities that assist us in the different stages of our work, from
+the collection and purification of data sets, through the application of
+different analysis methodologies, to the effective communication of the
+results. That’s why in this tutorial, we will study basic concepts of
+programming, fostering the exercise of abstract and logical thinking
+necessary to effectively communicate with the computer and make it
+perform the tasks we need. The programming language used in this
+tutorial is R, widely used in the field of data science. However, we
+must emphasize that **this is not an R tutorial**, meaning we will not
+focus on learning the tools that this language provides for data
+analysis.
+
+To incorporate some basic programming notions, we will make use of the
+help of **Karel**, a robot that lives and walks in rectangular
+**worlds**. We will ask Karel to perform certain activities, and for
+this, we have to program in R, so Karel will accompany us in the first
+steps we take with this language.
+
+*Karel the Robot* is a programming language created for educational
+purposes by Dr. R. E. Pattis from Stanford University (California, USA),
+who also wrote the book *Karel the Robot: A Gentle Introduction to the
+Art of Programming* in 1981. Its name pays homage to Karel Capek, the
+Swedish writer who invented the word robot in his science fiction work
+*R.U.R. (Rossum’s Universal Robots)*. Its syntax was based on Pascal, a
+very important programming language at that time. Over the decades, this
+teaching strategy has been used in many places around the world,
+implementing *Karel in different languages such as Java*, C++, Ruby, and
+Python. Many of the examples presented in this guide were taken from
+Karel the robot learns Java (Eric Roberts).
+
+As far as we know, Karel had not been developed in R. Our package is the
+first implementation, help us improve it by notifying us of anything you
+notice that needs revision!
+
+But before we delve into playing with Karel, let’s review some concepts
+related to Programming that it’s good to keep in mind.
+
+### Problems, algorithms, and programming languages
+
+We mentioned earlier that *programming* consists of instructing a
+computer to solve a problem, and the communication of those instructions
+must be clear. That’s why, when faced with a problem that needs to be
+solved computationally, the first step is to think carefully about how
+it can be solved, in other words, to create an *algorithm.* An
+*algorithm* is a consistent strategy of an ordered set of steps that
+leads us to the solution of a problem or the achievement of a goal.
+Then, we have to translate the chosen algorithm into the language of the
+computer.
+
+Therefore, we can say that the computational resolution of a problem
+consists of two basic stages:
+
+1.*Algorithmic design:* develop an algorithm, or choose an existing one,
+that solves the problem. 2. *Coding*: express an algorithm in a
+programming language so that the computer can interpret and execute it.
+
+When learning about programming, we start by facing simple problems for
+which the first stage seems easy, while coding becomes difficult because
+we have to learn the rules of the programming language. However, while
+with practice we can quickly gain ease in writing code, algorithmic
+design becomes more challenging as we tackle more complex problems.
+That’s why we will emphasize the formulation and development of
+algorithms as a fundamental stage in programming.
+
+#### Algorithmic Design
+
+When faced with a problem, the first step is to devise an algorithm for
+its solution and express it in writing, for example, in Spanish, but
+adapting human language to logical forms that resemble the tasks a
+computer can perform. In programming, the artificial and informal
+language that developers use in creating algorithms is called
+**pseudocode**. It is the tool we use to describe algorithms by mixing
+common language with programming instructions. It is not a programming
+language itself, meaning the computer is not capable of understanding
+it. The purpose of pseudocode is to allow the programmer to focus on the
+logical solution and then use it as a guide when writing the program. In
+this tutorial, we will not be providing examples of pseudocode writing.
+However, it is important to understand that before attempting to
+program, it is essential to think ahead and plan the algorithm, i.e.,
+all the steps required to reach the solution, and jot them down on paper
+with a pen while devising a strategy. This can be a great aid in the
+process.
+
+#### **Coding**
+
+An algorithm presented in pseudocode could use terms taken from the
+Spanish language, which is a reasonable choice for sharing this strategy
+among people who communicate in this language. However, if we want to
+present our algorithm to someone who only speaks French, Spanish would
+no longer be a good choice, let alone if we want to present the
+algorithm to a computer. In order for a computer to understand our
+algorithm, we need to translate it into a *programming language*, which,
+as mentioned before, is an artificial language designed to express
+computations that can be carried out by electronic devices; in other
+words, it is a means of communication between humans and machines.
+
+There are two types of errors: **logical** and **syntactic**. The latter
+have to do with when instructions or variable names are not written
+correctly and the program cannot “interpret” them. Logic errors are
+generated with instructions that the program can interpret, but that do
+things that we do not want.
+
+Each of the actions that make up the algorithm are encoded with one or
+several *instructions*, expressed in the chosen programming language,
+and the set of all of them constitutes a *program*. The program encoding
+is saved in a plain text file with an identifier usually divided into
+two parts by a dot, for example: `my_first_program.R`. The first part is
+the file name. The second part is indicative of the language that can
+interpret the instructions, for example, `.R` indicates that it contains
+a program written in the R language. The general process of writing or
+modifying the instructions in a file is called *editing*.
+
+### **Programming Errors**
+
+As soon as we embark on our journey into the world of programming, we
+will realize that we will always have certain companions: *errors*. Many
+times, we will try to run our code and it won’t work or produce the
+expected result. No matter how careful we are or how much experience we
+have, errors are always present. Over time and practice, we will be able
+to identify and correct them more easily, but we will probably never
+stop making them. This is not something to be discouraged about, as
+solving the errors we make often leads to great learning experiences.
+
+Programming errors are often called *bugs*, and the process of
+correcting them is known as *debugging*. It is said that this
+terminology dates back to 1947 when a computer at Harvard University
+(the *Mark II*) stopped working, and it was eventually discovered that
+the cause of the problem was a moth found in one of the machine’s
+electromagnetic relays. However, other historians argue that the term
+was already in use before that.
+
+### **Processor, Environment, and Actions**
+
+We have defined an algorithm as a list of instructions to solve a
+problem. In this context, *processor* is understood as any agent capable
+of understanding the steps of an algorithm and executing the work
+indicated by it. To achieve the objective, the processor uses certain
+resources that it has at its disposal. All the elements available to be
+used by the programmer constitute the *environment* or *working
+environment*. Each of the instructions that make up the algorithm modify
+the environment in some way and are called *actions*.
+
+### **R and RStudio**
+
+As mentioned earlier, we will put into practice programming concepts
+using **R**. Unlike many other languages, R is free and open-source
+software distributed under the *GNU GPLv2* license, which allows freedom
+to use it for any purpose, to see how it was made, how it works, and to
+modify it, distribute copies, and create contributions and additions for
+them to be available to others.
+
+Although R will be our means of communication with the computer, we will
+use another program that provides some tools to facilitate our
+programming work. In other words, we will use an integrated development
+environment (IDE). An IDE is a program that makes coding easier by
+allowing us to manage multiple code files, visualize the working
+environment, use color highlighting for different parts of the code,
+employ autocomplete to write faster, explore help pages, implement
+debugging strategies, and even interactively execute instructions while
+viewing the results as we progress in analyzing or solving the problem.
+The most popularly used IDE for programming with R is RStudio, and it
+will be the program we’ll be using all the time.
+
+To install these programs, you should visit the official websites of
+[**R**](https://www.r-project.org/) and
+[**RStudio**](https://posit.co/), download the installers, and run them.
+You can find a complete installation guide in this
+[**link**](https://www.youtube.com/watch?v=D9Bp11iZssc).
+
+#### **Organization of RStudio**
+
+When you open RStudio, you will see four panels:
+
+![Captura de pantalla de RStudio](abrir_rstudio.png)
+
+Captura de pantalla de RStudio
+
+- On the left:
+
+  - At the top is the **file editor**. This is where we will write and
+    edit our programs, and then save them. The first time you open
+    RStudio after installation, this panel may not be present, but it
+    appears if you go to **`File > New File > R Script`**, use the
+    shortcut **`Ctrl + Shift + N`**, or click on the first icon in the
+    toolbar. You can open multiple files at once.
+
+  - Below is the **console**. The console is the interactive environment
+    between R and the user. Through the console, we send *instructions*
+    to R for evaluation (also known as running or executing them), and
+    the results are displayed there.
+
+- In the top-right corner, there is a panel with several tabs:
+
+  - **Environment** (*environment*): shows the elements created in the
+    current work session, which make up the environment.
+
+  - **History**: lists all the instructions that the user has executed.
+
+  - *Other tabs that are not relevant for now*.
+
+- In the bottom-right corner, there is another panel with additional
+  tabs:
+
+  - **Files**: file explorer for your computer.
+
+  - **Plots**: window where graphics appear if your code produces any.
+
+  - **Packages**: tool for installing, updating and loading R packages
+    (later we will talk about “packages” again).
+
+  - **Help**: help manual covering all the functions of R.
+
+  - **Viewer**: space to view program outputs with dynamic or
+    interactive components.
+
+#### **Using the Console**
+
+We can use the R console found in the left panel to enter our
+instructions there, and when we press **`Enter`**, they will be
+evaluated, producing some results. For example, we can perform
+mathematical calculations such as division, multiplication, addition,
+subtraction, exponentiation, logarithms, square roots, and more:
+
+``` r
+> 1 + 2
+[1] 3
+> 5 * 3
+[1] 15
+> exp(2)
+[1] 7.389056
+> sqrt(100)
+[1] 10
+> 1 / 0
+[1] Inf
+> (2 + 3i) * (3 + 6i)
+[1] -12+21i
+> 1i ^ 2
+[1] -1+0i
+```
+
+In the block above the lines starting with `>` represent code written by
+the user in the console. The result is shown below and in these cases
+they are lines that start with `[1]`, something that we can ignore for
+the moment.
+
+While we can write our instructions in the console and press **`Enter`**
+to execute them, generally, we want to write and save them in a code
+file. That’s why we will write our programs in the top-left panel. Once
+we write an instruction in the script, we can *run* it (i.e., send it to
+the console for execution) by clicking the *Run* button or using the
+shortcut *Ctrl + Enter*. This way, the line where the cursor is or the
+selected lines will be *run*.
+
+In every programming language, there is a special character that, when
+placed at the beginning of a code line, tells the software that the line
+should not be evaluated. This is used to include **comments**, which are
+lines that express explanations or clarifications in natural language
+for ourselves or others who may use our code. Comments are also used to
+add headers with descriptions of the script or indicate different
+sections or parts of the program. In R, this special character is the
+number symbol (**`#`**). If we *run* lines that begin with **`#`**, R
+will ignore them and skip them. For example:
+
+``` r
+> 5^1
+[1] 5
+> # 5^2   this is not evaluated
+> 5^3
+[1] 125
+```
+
+#### **R System Design**
+
+R is divided into two parts:
+
+- The **base** (*R Base*), which is installed when we download the
+  program from [**CRAN**](https://cran.r-project.org/) (Comprehensive R
+  Archive Network). It contains, among other things, a set of basic and
+  fundamental tools of R.
+
+- **Additional packages**. A package is a set of files that can be
+  optionally downloaded from CRAN or other repositories and is used to
+  perform specific tasks. For example, to work with Karel, we need to
+  install the package that contains its implementation, called
+  **`karel`**.
+
+As mentioned earlier, the *Packages* tab in the bottom-right panel
+displays a list of all the packages that are already installed (many of
+them come with R Base). There is also a button there to install new
+packages from CRAN. Alternatively, you can run the command
+**`install.packages("packagename")`** to install a package:
+
+``` r
+> # Instalar desde CRAN el paquete karel
+> install.packages("karel")
+```
+
+It is also possible to install packages published in other repositories.
+For example, it is common to download packages under development or
+experimentation that are available on the GitHub platform. These
+packages can be installed by specifying the GitHub account name of the
+package author and the package name. If we want to install the
+development version of the **`karel`** package (not necessary), we would
+do the following:
+
+``` r
+> # Instalar desde CRAN el paquete devtools
+> install.packages("devtools")
+> # Instalar desde GitHub el paquete karel
+> devtools::install_github("ropensci/karel")
+```
+
+A package is installed only once, but every time we want to use it, we
+need to *load* it so that its tools become available to us. This is done
+with the
+**[`library("packagename")`](https://rdrr.io/r/base/library.html)**
+command, for example,
+[`library("karel")`](https://ropensci.github.io/karel/).

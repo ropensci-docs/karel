@@ -1,0 +1,301 @@
+# La robot Karel / Karel the robot ![](reference/figures/karel_hexsticker.png)
+
+## ¿Quién es Karel? / Who is Karel?
+
+Desarrollado por el Dr. R. E. Pattis en la Universidad de Stanford en
+1981, Karel es una herramienta que persigue la misión de enseñar
+conceptos fundamentales y generales de programación, como descomposición
+algorítmica, declaraciones condicionales, bucles y más. Aunque Karel ha
+sido implementado en varios lenguajes a lo largo de los años, este es el
+primer paquete que trae a Karel al entorno de R.
+
+Esta herramienta es útil para ser utilizada con estudiantes que no
+tienen experiencia previa en R ni en otro lenguaje, pero que deben
+adquirir nociones elementales de programación porque necesitan comenzar
+a usar R para sus estudios. El paquete pretende ayudar a incorporar
+estos conocimientos de forma lúdica, permitiendo que los usuarios
+jueguen y completen desafíos con Karel. Por ejemplo, este paquete es
+utilizado en un curso informal de pre-ingreso a la carrera de
+Licenciatura en Estadística en la Universidad Nacional de Rosario
+(Argentina) con futuros estudiantes que en su mayoría son adolescentes y
+no tienen experiencia en programación.
+
+El paquete Karel ofrece a través de sus viñetas lecciones para
+transmitir estos conocimientos generales que, si bien no incluyen
+herramientas de programación para análisis de datos o técnicas de
+codificación avanzadas, se enfocan en las bases de la programación,
+enseñadas en el entorno R.
+
+------------------------------------------------------------------------
+
+Developed by Dr. R. E. Pattis at Stanford University in 1981, **Karel**
+is a tool aimed at teaching fundamental and general programming
+concepts, such as algorithmic decomposition, conditional statements,
+loops, and more. Although Karel has been implemented in various
+languages over the years, this is the first package to bring Karel to
+the R environment.
+
+This tool is useful to be used with students who have no prior
+experience in R or any other language but need to acquire basic
+programming notions because they need to start using R for their
+studies. The package aims to help incorporate this knowledge in a
+playful way, allowing users to play and complete challenges with Karel.
+For example, this package is used in an informal pre-entry course for
+the Bachelor’s degree in Statistics at the National University of
+Rosario (Argentina) with future students who are mostly teenagers and
+have no programming experience.
+
+The Karel package offers lessons through its vignettes to convey these
+general knowledge, which, while not including programming tools for data
+analysis or advanced coding techniques, focus on the foundations of
+programming, taught in the R environment.
+
+## Instalación / Installation
+
+Podés instalar `karel` desde
+[CRAN](https://CRAN.R-project.org/package=karel) / You can install
+`karel` from [CRAN](https://CRAN.R-project.org/package=karel):
+
+``` r
+
+install.packages("karel")
+```
+
+También podés instalar la versión en desarrollo desde
+[GitHub](https://github.com/ropensci/karel) / You can also install the
+development version from [GitHub](https://github.com/ropensci/karel):
+
+``` r
+
+# install.packages("devtools")
+devtools::install_github("ropensci/karel")
+```
+
+## Ejemplos / Examples
+
+Podés programar a Karel para que realice tareas como las siguientes /
+You can program Karel to perform tasks such as:
+
+![](reference/figures/33.gif)
+
+![](reference/figures/30.gif)
+
+Visitá los artículos para ver cómo lograrlo y solucionar muchos casos
+más / Visit the articles to learn how to do it and to solve other
+problems.
+
+## Cómo citar este paquete / How to cite this package
+
+``` R
+Prunello M (2023). karel: Learning programming with Karel the robot. 
+R package version 0.1.1.9000, <https://ropensci.github.io/karel/>.
+```
+
+## Código de conducta / Code of conduct
+
+Por favor notar que este paquete se ha publicado con un [Código de
+Conducta](https://ropensci.org/code-of-conduct/). Please note that this
+package is released with a [Contributor Code of
+Conduct](https://ropensci.org/code-of-conduct/). Please note that this
+package is released with a [Contributor Code of
+Conduct](https://ropensci.org/code-of-conduct/). By contributing to this
+project, you agree to abide by its terms.
+
+# Índice del paquete
+
+## Referencias en español
+
+### Generar un mundo y ejecutar acciones
+
+Todo programa debe comenzar y terminar con estas funciones.
+
+- [`generar_mundo()`](https://docs.ropensci.org/karel/reference/generar_mundo.md)
+  : Generar el mundo de Karel
+- [`ejecutar_acciones()`](https://docs.ropensci.org/karel/reference/ejecutar_acciones.md)
+  : Ejecutar acciones
+
+### Acciones que Karel puede realizar
+
+Funciones que implementan las cuatro actividades básicas que Karel sabe
+realizar (avanzar, girar a la izquierda, poner y juntar “cosos”). Si se
+habilitan los superpoderes de Karel, también puede girar a la derecha y
+darse vuelta.
+
+- [`avanzar()`](https://docs.ropensci.org/karel/reference/acciones.md)
+  [`girar_izquierda()`](https://docs.ropensci.org/karel/reference/acciones.md)
+  [`poner_coso()`](https://docs.ropensci.org/karel/reference/acciones.md)
+  [`juntar_coso()`](https://docs.ropensci.org/karel/reference/acciones.md)
+  [`girar_derecha()`](https://docs.ropensci.org/karel/reference/acciones.md)
+  [`darse_vuelta()`](https://docs.ropensci.org/karel/reference/acciones.md)
+  : Acciones que Karel puede realizar
+- [`cargar_super_karel()`](https://docs.ropensci.org/karel/reference/cargar_super_karel.md)
+  : Habilitar los superpoderes de Karel
+
+### Condiciones que Karel puede verificar
+
+Este conjunto de funciones devuelven un valor lógico TRUE o FALSE según
+la evaluación que Karel puede hacer de su mundo.
+
+- [`frente_abierto()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`frente_cerrado()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`izquierda_abierto()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`izquierda_cerrado()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`derecha_abierto()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`derecha_cerrado()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`hay_cosos()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`no_hay_cosos()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`karel_tiene_cosos()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`karel_no_tiene_cosos()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`mira_al_este()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`mira_al_oeste()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`mira_al_norte()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  [`mira_al_sur()`](https://docs.ropensci.org/karel/reference/condiciones.md)
+  : Condiciones que Karel puede verificar
+
+### Funciones internas
+
+Selección de funciones internas que podrían ser útiles para un uso algo
+más avanzado del paquete.
+
+- [`conseguir_amb()`](https://docs.ropensci.org/karel/reference/conseguir_amb.md)
+  : Obtener el ambiente de Karel
+- [`graficar_mundo_estatico()`](https://docs.ropensci.org/karel/reference/graficar_mundo_estatico.md)
+  : Producir un gráfico del mundo de Karel en un momento dado
+
+## Reference in English
+
+### Generate a world and run actions
+
+Every program must start and end with calls to these functions.
+
+- [`generate_world()`](https://docs.ropensci.org/karel/reference/generate_world.md)
+  : Create Karel's world
+- [`run_actions()`](https://docs.ropensci.org/karel/reference/run_actions.md)
+  : Run actions
+
+### Available actions for Karel
+
+These functions implement the four basic actions that Karel can perform
+(move, turn left, put and pick beepers). If Karel’s superpowers are
+turned on, she can also turn right and turn around.
+
+- [`move()`](https://docs.ropensci.org/karel/reference/actions.md)
+  [`turn_left()`](https://docs.ropensci.org/karel/reference/actions.md)
+  [`put_beeper()`](https://docs.ropensci.org/karel/reference/actions.md)
+  [`pick_beeper()`](https://docs.ropensci.org/karel/reference/actions.md)
+  [`turn_right()`](https://docs.ropensci.org/karel/reference/actions.md)
+  [`turn_around()`](https://docs.ropensci.org/karel/reference/actions.md)
+  : Available actions for Karel
+- [`load_super_karel()`](https://docs.ropensci.org/karel/reference/load_super_karel.md)
+  : Turn on Karel's superpowers
+
+### Conditions that Karel can test
+
+These group of functions return a logical value TRUE or FALSE according
+to Karel’s evaluation of her world.
+
+- [`front_is_clear()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`front_is_blocked()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`left_is_clear()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`left_is_blocked()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`right_is_clear()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`right_is_blocked()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`beepers_present()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`no_beepers_present()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`karel_has_beepers()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`karel_has_no_beepers()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`facing_east()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`facing_west()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`facing_north()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  [`facing_south()`](https://docs.ropensci.org/karel/reference/conditions.md)
+  : Conditions that Karel can test
+
+### Internal functions
+
+Selected internal functions that could be useful to use the package in a
+more advanced way.
+
+- [`get_pkg_env()`](https://docs.ropensci.org/karel/reference/get_pkg_env.md)
+  : Get Karel's environment
+- [`plot_static_world()`](https://docs.ropensci.org/karel/reference/plot_static_world.md)
+  : Plot the world at a given time
+
+# Artículos
+
+### ES - Tutoriales en español
+
+- [1 - Introducción y nociones
+  básicas](https://docs.ropensci.org/karel/articles/a_intro_progrbasics_es.md):
+
+  Antes de comenzar a jugar con Karel, presentamos algunas ideas
+  generales acerca de la programación y el uso de R y RStudio.
+
+- [2 - Conociendo a
+  Karel](https://docs.ropensci.org/karel/articles/b_meetingkarel_es.md):
+
+  ¿Quién es Karel? ¿Cómo es su mundo? ¿Qué actividades puede hacer? Acá
+  contamos cómo interactuar con la robot Karel.
+
+- [3 - Descomposición
+  algorítmica](https://docs.ropensci.org/karel/articles/c_decomposition_es.md):
+
+  Una buena idea a la hora de solucionar un problema es descomponerlo en
+  partes más sencillas. Para esto vamos a aprender a escribir funciones,
+  para que Karel pueda completar sus tareas de forma más organizada.
+
+- [4 - Estructuras de control del
+  código](https://docs.ropensci.org/karel/articles/d_controlstructures_es.md):
+
+  Las estructuras de control le van a ayudar a Karel repetir algunas
+  actividades y tomar decisiones según las características actuales de
+  su mundo.
+
+- [5 - Varios problemas de
+  ejemplo](https://docs.ropensci.org/karel/articles/e_examples_es.md):
+
+  Terminamos este tutorial con varios problemas para poner en práctica
+  todo lo aprendido junto a Karel.
+
+### EN - Tutorials in English
+
+- [1 - Introduction and programming
+  basics](https://docs.ropensci.org/karel/articles/a_intro_progrbasics_en.md):
+
+  Before we start playing with Karel, let’s go over some general ideas
+  about programming and using R and RStudio.
+
+- [2 - Meeting
+  Karel](https://docs.ropensci.org/karel/articles/b_meetingkarel_en.md):
+
+  Here we tell you how to interact with Karel the robot.
+
+- [3 - Algorithmic
+  decomposition](https://docs.ropensci.org/karel/articles/c_decomposition_en.md):
+
+  A good idea when solving a problem is to decompose it into simpler
+  parts. To do this, we are going to learn how to write functions so
+  that Karel can complete its tasks in a more organized way.
+
+- [4 - Control
+  structures](https://docs.ropensci.org/karel/articles/d_controlstructures_en.md):
+
+  The control structures will help Karel repeat certain activities and
+  make decisions based on the current characteristics of its world.
+
+- [5 -
+  Examples](https://docs.ropensci.org/karel/articles/e_examples_en.md):
+
+  We finish this tutorial with several problems to put in practice
+  everything we have learned with Karel.
+
+### Others
+
+- [Primeros pasos con la robot
+  Karel](https://docs.ropensci.org/karel/articles/aa_get_started_es.md):
+
+  Quién es Karel y para qué sirve este paquete
+
+- [Get started with Karel the
+  robot](https://docs.ropensci.org/karel/articles/aa_get_started_en.md):
+
+  Who is Karel and what is this package for
